@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Animal Compatibility</title>
+<link href ="style.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@600&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+<div class="opening-Container">
+<h1>Animal Compatibility</h1>
+<p>Getting a pet is a very exciting time, but providing everything for a new animal can end up being overwhelming. We can help you choose the 
+    right pet for you, and understand the needs of the pet you're thinking about getting. Get started by answering some simple questions below!</p>
+</div>
+
+<form class= "quiz-Container lightBlue" name = "quiz">
+    <div class="question-Container darkBlue">
+        <div class = "questions">How do you feel about pet maintenance? </div>
+        <p class="under-question">Will you be able to live with pet hair, a litter box, vomit, water changes, general pet maintenance</p>
+    </div>
+    <div class="choices-container">
+        <input type = "radio" id = "mc" name = "question8" value = "a"><p class="choices">I don't want to deal with a lot of animal maintenance</p><br>
+        <input type = "radio" id = "mc" name = "question8" value = "b"> <p class="choices">I don't mind mild animal maintenance</p><br>
+        <input type = "radio" id = "mc" name = "question8" value = "c"> <p class="choices">I don't mind a great deal of animal maintenance</p><br>
+    </div>
+
+<input id = "button" type = "button" value = "I'm Finished!" onclick = "check()">
+</form>
+
+<!-- 
+<div id ="after_submit">
+<input id="after_btn" type="button" value="Play again?" onclick="scrollToTop()";>
+<p id ="number_correct"></p>
+<p id ="message"></p>
+<img id ="picture">
+</div> -->
+
+<script src = "script.js"></script>
+</body>
+</html>
+
