@@ -15,21 +15,75 @@
     right pet for you, and understand the needs of the pet you're thinking about getting. Get started by answering some simple questions below!</p>
 </div>
 
-<form class= "quiz-Container lightBlue" name = "quiz">
+<form class= "quiz-Container lightBlue" name = "quiz" id="Q1">
     <div class="question-Container darkBlue">
         <div class = "questions">How do you feel about pet maintenance? </div>
         <p class="under-question">Will you be able to live with pet hair, a litter box, vomit, water changes, general pet maintenance</p>
     </div>
     <div class="choices-container">
-            <p class="choices"><input type = "radio" id = "mc" name = "question8" value ="a">I don't want to deal with a lot of animal maintenance</p><br>
-            <p class="choices"><input type = "radio" id = "mc" name = "question8" value = "b"> I don't mind mild animal maintenance</p><br>
-            <p class="choices"><input type = "radio" id = "mc" name = "question8" value = "c"> I don't mind a great deal of animal maintenance</p><br>
+            <div class="choices">
+                
+                <input type = "radio" id = "mc" name = "question8" value="a" >
+                <label class="choices-text">
+                I don't want to deal with a lot of animal maintenance
+            </label>
+            </div>
+
+    <div class="choices">
+        <label>
+        <input type = "radio" id = "mc" name = "question8" value="a" class="choices-text">
+        I don't want to deal with a lot of animal maintenance
+    </label>
+    </div>
+
+    <div class="choices">
+            <label>
+            <input type = "radio" id = "mc" name = "question8" value="a" class="choices-text">
+            I don't want to deal with a lot of animal maintenance
+        </label>
+        </div>
     </div>
 
     <div class="next-button-container">
-        <input id = "button" type = "button" value = "Next" class="next-button darkBlue" onclick = "check()">
+        <button id = "next-Q2" type = "button" class="next-button darkBlue">Next</button>
     </div>
 </form>
+
+
+<form class= "quiz-Container lightPurple after-submit" id="Q2" name = "quiz" >
+    <div class="question-Container darkPurple">
+        <div class = "questions">If you have children, how will having a pet affect them?</div>
+        <p class="under-question">Will everyone in your home welcome an animal? Is that animal safe around small children?</p>
+    </div>
+    <div class="choices-container">
+            <input type = "radio" id = "mc" name = "question8" value ="a"><p class="choices">I have small children's saftely to consider</p><br>
+            <p class="choices"><input type = "radio" id = "mc" name = "question8" value = "b">I have small children but I've taught them how to behave around animals</p><br>
+            <p class="choices"><input type = "radio" id = "mc" name = "question8" value = "c"> I dont have small children and we want a new family member</p><br>
+    </div>
+
+    <div class="next-button-container">
+        <button id = "back" class = "darkPurple">Back</button><button id = "next-Q3" type = "button" class="next-button darkPurple">Next</button>
+    </div>
+</form>
+
+
+<form class= "quiz-Container lightGreen after-submit" id="Q3" name = "quiz" >
+    <div class="question-Container darkGreen">
+        <div class = "questions">If you have children, how will having a pet affect them?</div>
+        <p class="under-question">Will everyone in your home welcome an animal? Is that animal safe around small children?</p>
+    </div>
+    <div class="choices-container">
+            <p class="choices"><input type = "radio" id = "mc" name = "question8" value ="a">I have small children's saftely to consider</p><br>
+            <p class="choices"><input type = "radio" id = "mc" name = "question8" value = "b">I have small children but I've taught them how to behave around animals</p><br>
+            <p class="choices"><input type = "radio" id = "mc" name = "question8" value = "c"> I dont have small children and we want a new family member</p><br>
+    </div>
+
+    <div class="next-button-container">
+            <button id = "back" class = "darkGreen">Back</button><button id = "next-Q4" type = "button" class="next-button darkGreen">Next</button>
+    </div>
+</form>
+    
+
 
 <!-- 
 <div id ="after_submit">
