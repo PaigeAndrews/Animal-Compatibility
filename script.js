@@ -1,31 +1,53 @@
-let Q1 = document.getElementById("Q1");
-let Q2 = document.getElementById("Q2");
-let nextQ2 = document.getElementById("next-Q2");
-let nextQ3 = document.getElementById("next-Q3");
-let nextQ4 = document.getElementById("next-Q4");
+let QuestionSection = document.getElementById("questionSection");
+let questionContainer = document.getElementById("questionContainer");
+let subQ = document.getElementById("subQ");
+let mainQ = document.getElementById("mainQ");
+let choice1 = document.getElementById("choice1");
+let choice2 = document.getElementById("choice2");
+let choice3 = document.getElementById("choice3");
+let nextButton = document.getElementById("nextButton");
 let back = document.getElementById("back");
 
+let nextClicked = 0;
 
+let titleArray = [
+  "If you have children, how will having a pet affect them?",
+  "Will you want a pet that is less destructive to the home or outside area?",
+  "How much space do you have inside and outside your home?",
+  "How much time do you have to spend with a pet?",
+  "What is your activity level?",
+  "How much money could you spend on your new pet?",
+  "Do you have a secondary caregiver?"
+];
 
-nextQ2.addEventListener("click", function(){
-    Q1.style.display = "none";
-    Q2.style.visibility = "visible";
-    back.addEventListener("click", function(){
-        Q2.style.display = "none";
-        Q1.style.visibility = "visible";
-        console.log("back")
-    });
+let subTitle = ["Is that animal safe around small children?",
+"If you rent, do you have permission from the property owner?",
+"Will you need a fenced yard?",
+"Depending on the pet, some require a great deal of attention!",
+"Are you sedentary or physically active?",
+"Do you have the financial resources if your pet has a medical crisis and has high veterinary bills?",
+"If an emergency happens, or you are simply away from home or on vacation, can you rely on them?"
+]
 
-  });
+let addClasses = ["darkPurple","darkGreen"]
 
-  nextQ3.addEventListener("click", function(){
-    Q2.style.display = "none";
-    Q3.style.visibility = "visible";
-    back.addEventListener("click", function(){
-        Q3.style.display = "none";
-        Q2.style.visibility = "visible";
-        console.log("back")
-    });
-  });
+nextButton.addEventListener("click", function(){
+  mainQ.innerHTML = titleArray[nextClicked]
+  subQ.innerHTML= subTitle[nextClicked]
+  questionContainer.classList.add(addClasses[nextClicked])
+  nextClicked++
+  if(nextClicked == 7){
+    questionSection.style.visibility = "hidden";
+  }
+})
+ 
+// nextButton.addEventListener("click", function(){
+//   if (nextClicked == 1){
+//     mainQ.innerHTML = titleArray[1]
+//   }
+//   nextClicked++
+
+//   });
+  
 
  

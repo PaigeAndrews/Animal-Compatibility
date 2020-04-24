@@ -77,25 +77,17 @@ p{
     border: none;
 }
 
-.choices-text{
-    /* border: 2px solid grey;  */
-    
-     padding-left: 2%;
-    padding-right: 2%;
-    
-    /* background: radial-gradient(rgb(109, 109, 255), rgb(109, 109, 255),rgb(41, 41, 184), rgb(36, 11, 128));  */
-    background: rgb(73, 73, 243);
-    
-}
-
 .choices{
     border-radius: 10px;
+    padding-left: 2%;
+     padding-right: 2%;
+}
+
+.blue-buttons{
+    background: rgb(73, 73, 243);
     border-bottom: 10px solid rgb(56, 56, 218);
     border-top: 10px solid rgb(94, 94, 245);
     border-left: 10px solid rgb(94, 94, 245);
-    /* border: 2px solid rgb(56, 56, 218);  */
-    
-  
 }
 
 /* 
@@ -111,22 +103,6 @@ p{
   
 }
 
-
-.next-button-container{
-    display: flex;
-    justify-content: center;
-    
-}
-
-
-
-.next-button{
-    width: 70vw;
-    padding: 2%;
-    color: white;
-    font-size: 3rem;
-    border: none;
-}
 
 input[type='radio'] { 
     transform: scale(7);
