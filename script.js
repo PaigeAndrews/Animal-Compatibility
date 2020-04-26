@@ -2,6 +2,7 @@ let QuestionSection = document.getElementById("questionSection");
 let questionContainer = document.getElementById("questionContainer");
 let subQ = document.getElementById("subQ");
 let mainQ = document.getElementById("mainQ");
+let choices = document.getElementsByClassName("choices");
 let choice1 = document.getElementById("choice1");
 let choice2 = document.getElementById("choice2");
 let choice3 = document.getElementById("choice3");
@@ -9,6 +10,7 @@ let nextButton = document.getElementById("nextButton");
 let back = document.getElementById("back");
 
 let nextClicked = 0;
+let petPoints = 0;
 
 let titleArray = [
   "If you have children, how will having a pet affect them?",
@@ -29,25 +31,24 @@ let subTitle = ["Is that animal safe around small children?",
 "If an emergency happens, or you are simply away from home or on vacation, can you rely on them?"
 ]
 
-let addClasses = ["darkPurple","darkGreen"]
+let addDarkColor = ["darkPurple","darkGreen"]
+let addButtonColor = ["purple-buttons"]
 
 nextButton.addEventListener("click", function(){
   mainQ.innerHTML = titleArray[nextClicked]
   subQ.innerHTML= subTitle[nextClicked]
-  questionContainer.classList.add(addClasses[nextClicked])
+  questionContainer.classList.add(addDarkColor[nextClicked])
+  nextButton.classList.add(addDarkColor[nextClicked])  
+  choices.classList.add(addButtonColor[nextClicked])
   nextClicked++
   if(nextClicked == 7){
     questionSection.style.visibility = "hidden";
   }
 })
  
-// nextButton.addEventListener("click", function(){
-//   if (nextClicked == 1){
-//     mainQ.innerHTML = titleArray[1]
-//   }
-//   nextClicked++
 
-//   });
-  
+choice1.addEventListener("click", function(){
+
+})
 
  
