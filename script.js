@@ -1,4 +1,4 @@
-let QuestionSection = document.getElementById("questionSection");
+let questionSection = document.getElementById("questionSection");
 let questionContainer = document.getElementById("questionContainer");
 let subQ = document.getElementById("subQ");
 let mainQ = document.getElementById("mainQ");
@@ -31,15 +31,19 @@ let subTitle = ["Is that animal safe around small children?",
 "If an emergency happens, or you are simply away from home or on vacation, can you rely on them?"
 ]
 
-let addDarkColor = ["darkPurple","darkGreen"]
-let addButtonColor = ["purple-buttons"]
+let addDarkColor = ["darkAqua","darkPurple","darkGreen", "darkYellow", "darkOrange", "darkRed", "darkPink"]
+let addLightColor = ["lightAqua","lightPurple","lightGreen",  "lightYellow", "lightOrange", "lightRed", "lightPink"]
+let addButtonColor = ["aqua-buttons","purple-buttons", "green-buttons", "yellow-buttons", "orange-buttons", "red-buttons", "pink-buttons"]
 
 nextButton.addEventListener("click", function(){
   mainQ.innerHTML = titleArray[nextClicked]
   subQ.innerHTML= subTitle[nextClicked]
   questionContainer.classList.add(addDarkColor[nextClicked])
+  questionSection.classList.add(addLightColor[nextClicked])
   nextButton.classList.add(addDarkColor[nextClicked])  
-  choices.classList.add(addButtonColor[nextClicked])
+  choices[0].classList.add(addButtonColor[nextClicked])
+  choices[1].classList.add(addButtonColor[nextClicked])
+  choices[2].classList.add(addButtonColor[nextClicked])
   nextClicked++
   if(nextClicked == 7){
     questionSection.style.visibility = "hidden";
