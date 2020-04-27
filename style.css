@@ -178,12 +178,12 @@ p{
 }
 
 /* Orange Area */
-.darkYellow{
+.darkOrange{
     background: rgb(175, 93, 0);
 }
 
 .lightOrange{
-    background: linear-gradient(45deg, rgb(175, 93, 0), rgb(243, 159, 64));
+    background: linear-gradient(45deg, rgb(196, 130, 7), rgb(243, 171, 64));
 }
 
 .orange-buttons{
@@ -193,4 +193,35 @@ p{
     border-left: 10px solid rgb(243, 159, 64);
 }
 
+/* Red Area */
+.darkRed{
+    background: rgb(175, 0, 0);
+}
+
+.lightRed{
+    background: linear-gradient(45deg, rgb(196, 51, 7), rgb(243, 76, 64));
+}
+
+.red-buttons{
+    background: rgb(218, 33, 33);
+    border-bottom: 10px solid rgb(185, 24, 24);
+    border-top: 10px solid rgb(243, 64, 64);
+    border-left: 10px solid rgb(243, 64, 64);
+}
+
+/* Pink Area */
+.darkPink{
+    background: rgb(175, 0, 137);
+}
+
+.lightPink{
+    background: linear-gradient(45deg, rgb(196, 7, 149), rgb(243, 64, 234));
+}
+
+.pink-buttons{
+    background: rgb(218, 33, 178);
+    border-bottom: 10px solid rgb(185, 24, 158);
+    border-top: 10px solid rgb(243, 64, 213);
+    border-left: 10px solid rgb(243, 64, 213);
+}
 

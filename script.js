@@ -45,7 +45,7 @@ nextButton.addEventListener("click", function(){
   choices[1].classList.add(addButtonColor[nextClicked])
   choices[2].classList.add(addButtonColor[nextClicked])
   nextClicked++
-  if(nextClicked == 7){
+  if(nextClicked == 8){
     questionSection.style.visibility = "hidden";
   }
 })
