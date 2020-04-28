@@ -131,7 +131,7 @@ function changeHTML(){
   nextClicked++
   if(nextClicked == 9){
         questionSection.style.display = "none";
-        resultsContainer.style.visibility = "visible";
+        resultsContainer.style.display = "flex";
        }
 }
 

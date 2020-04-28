@@ -2,6 +2,7 @@ body, html{
     margin: 0;
     padding: 0;
     font-family: 'Baloo Bhaina 2', cursive;
+    width: 100%;
 }
 
 .opening-Container{
@@ -25,6 +26,12 @@ h1{
     font-size: 6rem;
     margin: 0;
 }
+
+h6{
+    margin: 0;
+    margin-bottom: 10%;
+}
+
 p{
     padding-left: 5%;
     padding-right: 5%;
@@ -99,7 +106,7 @@ p{
     visibility: hidden;
 }
 
-#resultsContainer{
+/* #resultsContainer{
     background: rgb(153, 97, 97);
     justify-content: center;
     text-align: center;
@@ -109,21 +116,50 @@ p{
     display: flex;
     flex-wrap: wrap;
     padding: 2%;
+} */
+
+#resultsContainer{
+    justify-content: center;
+    display: none;
+    flex-wrap: wrap;
+    padding: 2%;
+    margin:-10px;
+} 
+
+/* #resultsContainer>* {
+    flex: 1 1 160px;
+    margin: 10px;
+  } */
+
+img{
+    border: 10px solid rgb(253, 81, 81);
 }
+
+
 
 .animalImage{
     border-radius: 50%;
-    width: 250px;
-    height: 255.08px;
+    width: 200px;
+    height: 200px;
     margin: 2%;
 }
 
+.animal-container{
+    width: 250px;
+    height: auto;
+    text-align: center;
+    margin: 2%;
+    font-size: 3.3rem;
+    color: rgb(85, 85, 85);
+    letter-spacing: 2px;
+}
+
 .redBorder{
-    border: 5px solid rgb(253, 81, 81);
+    border: 10px solid rgb(253, 81, 81);
 }
 
 .greenBorder{
-    border: 5px solid rgb(87, 230, 87);
+    border: 10px solid rgb(87, 230, 87);
 }
 
 
