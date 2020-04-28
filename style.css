@@ -30,7 +30,6 @@ p{
     padding-right: 5%;
     padding-bottom: 5%;
     margin: 0;
-    /* font-size: 3rem; */
 }
 
 .quiz-Container{
@@ -102,15 +101,30 @@ p{
 
 #resultsContainer{
     background: rgb(153, 97, 97);
-    align-items: center;
+    justify-content: center;
     text-align: center;
-    width: 550px;
-    height: 550px;
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    height: auto;
     visibility: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
 }
 
+.animalImage{
+    border-radius: 50%;
+    width: 250px;
+    height: 255.08px;
+    margin: 2%;
+}
+
+.redBorder{
+    border: 5px solid rgb(253, 81, 81);
+}
+
+.greenBorder{
+    border: 5px solid rgb(87, 230, 87);
+}
 
 
 
