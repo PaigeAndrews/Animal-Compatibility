@@ -30,6 +30,7 @@ h1{
 h6{
     margin: 0;
     margin-bottom: 10%;
+    color: rgb(85, 85, 85);
 }
 
 p{
@@ -118,6 +119,16 @@ p{
     padding: 2%;
 } */
 
+#resultsHeader{
+    justify-content: center;
+    text-align: center;
+    display: none;
+    padding: 2%;
+    background: white;
+    width: 100%;
+    height: auto;
+}
+
 #resultsContainer{
     justify-content: center;
     display: none;
@@ -126,6 +137,21 @@ p{
     margin:-10px;
 } 
 
+#animalInformation{
+    justify-content: center;
+    text-align: center;
+    display: none;
+    padding: 2%;
+    background: white;
+    width: 100%;
+    height: auto;
+}
+
+hr{
+ width: 80%;
+ background: gray;
+ height: 4px;
+}
 /* #resultsContainer>* {
     flex: 1 1 160px;
     margin: 10px;
@@ -150,17 +176,15 @@ img{
     text-align: center;
     margin: 2%;
     font-size: 3.3rem;
-    color: rgb(85, 85, 85);
+    
     letter-spacing: 2px;
 }
 
-.redBorder{
-    border: 10px solid rgb(253, 81, 81);
-}
 
-.greenBorder{
+/* .greenBorder{
     border: 10px solid rgb(87, 230, 87);
-}
+    color: rgb(87, 230, 87);
+} */
 
 
 

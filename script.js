@@ -6,24 +6,34 @@ let choices = document.getElementsByClassName("choices");
 let choice1 = document.getElementById("choice1");
 let choice2 = document.getElementById("choice2");
 let choice3 = document.getElementById("choice3");
+let resultsHeader =document.getElementById("resultsHeader")
 let resultsContainer = document.getElementById("resultsContainer");
+let animalInformation = document.getElementById("animalInformation");
 let nextButton = document.getElementById("nextButton");
 let back = document.getElementById("back");
+let medToHave = document.getElementsByClassName("medToHave");
+let easyToHave = document.getElementsByClassName("easyToHave");
+let FISH = document.getElementById("FISH");
+let FERRET = document.getElementById("FERRET");
+let LARGEDOG = document.getElementById("LARGEDOG");
+let GOAT = document.getElementById("GOAT");
+let LARGEBIRD = document.getElementById("LARGEBIRD");
+let HORSE = document.getElementById("HORSE");
 
-
-cat = 16
-smallDog = 16
-mlDog = 24
-smallPet = -24
-smallBird = -32
-largeBird = 30
-reptile = -24
-amphibian = -24
-fish = -40
-Pig = 16
-ferret = 0
-goat = 8
-horse =36
+// Animal values for refference
+// cat = 16
+// smallDog = 16
+// mlDog = 24
+// smallPet = -24
+// smallBird = -24
+// largeBird = 30
+// reptile = -24
+// amphibian = -24
+// fish = -40
+// Pig = 16
+// ferret = 0
+// goat = 8
+// horse =36
 
 
 
@@ -97,24 +107,6 @@ window.onload = function() {
   choice3.innerHTML = choice3Array[0]
 };
 
-
-// nextButton.addEventListener("click", function(){
-//   mainQ.innerHTML = titleArray[nextClicked]
-//   subQ.innerHTML= subTitle[nextClicked]
-//   choice1.innerHTML = choice1Array[nextClicked]
-//   choice2.innerHTML = choice2Array[nextClicked]
-//   choice3.innerHTML = choice3Array[nextClicked]
-//   questionContainer.classList.add(addDarkColor[nextClicked])
-//   questionSection.classList.add(addLightColor[nextClicked])
-//   nextButton.classList.add(addDarkColor[nextClicked])  
-//   choices[0].classList.add(addButtonColor[nextClicked])
-//   choices[1].classList.add(addButtonColor[nextClicked])
-//   choices[2].classList.add(addButtonColor[nextClicked])
-//   nextClicked++
-//   if(nextClicked == 8){
-//     questionSection.style.visibility = "hidden";
-//   }
-// })
  
 function changeHTML(){
   mainQ.innerHTML = titleArray[nextClicked]
@@ -130,10 +122,56 @@ function changeHTML(){
   choices[2].classList.add(addButtonColor[nextClicked])
   nextClicked++
   if(nextClicked == 9){
+        resultsFunction()
+    }
+
+}
+
+function resultsFunction(){
         questionSection.style.display = "none";
         resultsContainer.style.display = "flex";
-       }
+        animalInformation.style.display= "block";
+        resultsHeader.style.display= "block";
+
+        if(petPoints >= -40){
+          FISH.style.borderColor = "#57e657";
+        }
+
+        if(petPoints >= -24){
+          var i;
+          for (i = 0; i < easyToHave.length; i++) {
+          easyToHave[i].style.borderColor = "#57e657";
+          }
+        }
+
+        if(petPoints >= 0){
+          FERRET.style.borderColor = "#57e657";
+        }
+
+        if(petPoints >= 8){
+          GOAT.style.borderColor = "#57e657";
+        }
+
+        if(petPoints >= 16){
+          var i;
+          for (i = 0; i < medToHave.length; i++) {
+          medToHave[i].style.borderColor = "#57e657";
+          }
+        }
+
+        if(petPoints >= 24){
+          LARGEDOG.style.borderColor = "#57e657";
+        }
+        
+        if(petPoints >= 30){
+          LARGEBIRD.style.borderColor = "#57e657";
+        }
+        if(petPoints >= 36){
+          HORSE.style.borderColor = "#57e657";
+        }
+        
 }
+
 
 choice1.addEventListener("click", function(){
   changeHTML()
