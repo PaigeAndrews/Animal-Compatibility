@@ -1,3 +1,4 @@
+let openingParagraph = document.getElementById("openingParagraph");
 let questionSection = document.getElementById("questionSection");
 let questionContainer = document.getElementById("questionContainer");
 let subQ = document.getElementById("subQ");
@@ -13,28 +14,29 @@ let nextButton = document.getElementById("nextButton");
 let back = document.getElementById("back");
 let medToHave = document.getElementsByClassName("medToHave");
 let easyToHave = document.getElementsByClassName("easyToHave");
-let FISH = document.getElementById("FISH");
-let FERRET = document.getElementById("FERRET");
-let LARGEDOG = document.getElementById("LARGEDOG");
-let GOAT = document.getElementById("GOAT");
-let LARGEBIRD = document.getElementById("LARGEBIRD");
-let HORSE = document.getElementById("HORSE");
+let fish = document.getElementById("fish");
+let ferret = document.getElementById("ferret");
+let LargeDog = document.getElementById("largeDog");
+let goat = document.getElementById("goat");
+let largeBird = document.getElementById("largeBird");
+let horse = document.getElementById("horse");
 
 // Animal values for refference
-// cat = 16
-// smallDog = 16
-// mlDog = 24
-// smallPet = -24
-// smallBird = -24
-// largeBird = 30
-// reptile = -24
-// amphibian = -24
-// fish = -40
-// Pig = 16
-// ferret = 0
-// goat = 8
-// horse =36
-
+const animalObject = {
+cat:16,
+smallDog:16,
+largeDog:24,
+smallPet:-24,
+smallBird:-24,
+largeBird:30,
+reptile:-24,
+amphibian:-24,
+fish:-40,
+Pig:16,
+ferret:0,
+goat:8,
+horse:36
+}
 
 
 let nextClicked = 1;
@@ -123,18 +125,20 @@ function changeHTML(){
   nextClicked++
   if(nextClicked == 9){
         resultsFunction()
+        resultsHeader.scrollIntoView()
     }
 
 }
 
 function resultsFunction(){
+        openingParagraph.style.display = "none";
         questionSection.style.display = "none";
         resultsContainer.style.display = "flex";
         animalInformation.style.display= "block";
         resultsHeader.style.display= "block";
 
         if(petPoints >= -40){
-          FISH.style.borderColor = "#57e657";
+          fish.style.borderColor = "#57e657";
         }
 
         if(petPoints >= -24){
@@ -145,11 +149,11 @@ function resultsFunction(){
         }
 
         if(petPoints >= 0){
-          FERRET.style.borderColor = "#57e657";
+          ferret.style.borderColor = "#57e657";
         }
 
         if(petPoints >= 8){
-          GOAT.style.borderColor = "#57e657";
+          goat.style.borderColor = "#57e657";
         }
 
         if(petPoints >= 16){
@@ -160,14 +164,14 @@ function resultsFunction(){
         }
 
         if(petPoints >= 24){
-          LARGEDOG.style.borderColor = "#57e657";
+          largeDog.style.borderColor = "#57e657";
         }
         
         if(petPoints >= 30){
-          LARGEBIRD.style.borderColor = "#57e657";
+          largeBird.style.borderColor = "#57e657";
         }
         if(petPoints >= 36){
-          HORSE.style.borderColor = "#57e657";
+          horse.style.borderColor = "#57e657";
         }
         
 }
@@ -191,5 +195,9 @@ choice3.addEventListener("click", function(){
  console.log(petPoints)
 })
 
+// let animalIds = ["cat"];
+// let animalIdParagraph = ["1"];
 
- 
+//  cat.addEventListener("click", function(){
+//   document.getElementById("1").scrollIntoView()
+//  })

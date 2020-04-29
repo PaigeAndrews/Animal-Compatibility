@@ -26,6 +26,11 @@ h1{
     font-size: 6rem;
     margin: 0;
 }
+h5{
+    color: rgb(85, 85, 85);
+    font-size: 3.3rem;
+    letter-spacing: 2px;
+}
 
 h6{
     margin: 0;
@@ -51,7 +56,6 @@ p{
 .question-Container{
     width: 100%;
     height: auto;
-    
     text-align: center;
 }
 
@@ -176,7 +180,6 @@ img{
     text-align: center;
     margin: 2%;
     font-size: 3.3rem;
-    
     letter-spacing: 2px;
 }
 
