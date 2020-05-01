@@ -123,9 +123,9 @@ let num = 0;
 
  
 function changeHTML(){
-  for(i=0; i<5; i++){
+  for(let i=0; i<5; i++){
     innerIds[i].removeChild(innerIds[i].childNodes[0]); 
-    var textnode = document.createTextNode((changingArrays[i])[nextClicked]);
+    let textnode = document.createTextNode((changingArrays[i])[nextClicked]);
     innerIds[i].appendChild(textnode);
   }
   num++
@@ -154,7 +154,7 @@ function resultsFunction(){
         }
 
         if(petPoints >= -24){
-          var i;
+          let i;
           for (i = 0; i < easyToHave.length; i++) {
           easyToHave[i].style.borderColor = "#57e657";
           }
@@ -169,7 +169,7 @@ function resultsFunction(){
         }
 
         if(petPoints >= 16){
-          var i;
+          let i;
           for (i = 0; i < medToHave.length; i++) {
           medToHave[i].style.borderColor = "#57e657";
           }
@@ -239,13 +239,19 @@ let animalParagraphArray = [
 //   ]
 // }
 
-arrIds = [cat, smallDog];
-arrTitle = ["Cat", "Small Dog"];
-arrDescription = ["cats are good", "small dogs are bad"];
+arrIds = [cat, smallDog, largeDog, smallPet];
+arrTitle = ["Cat", "Small Dog", "largeDog", "Small Pet"];
+arrDescription = [
+  "Cats are a very common household pet. They cannot stay cooped up in one room, and ideally need roam of the house or outside. Cat need a litter box (changed daily). If you want mulitiple cats you need one per cat with one extra. Cats enjoy scratching posts and high places. Please note that cats can have mild destruction on home when it comes to their claws and fur. They are very loving but also independent animals, so you won't have to worry about them at work if you have a busy schedule.", 
+  "Small dogs can stay indoors or outdoors. They need regular exercise and do not cause much home destruction. They need attention and playtime though, so before adopting one you have sufficent time to spend with it daily. Small dogs really enjoy little play toys you can leave around your home for them to play with. They are not a high maintenance pet.",
+  "Large dogs are about the same with medium dogs when it comes to care. They can also live indoors or outdoors, however, it is best for them be in a large outside area. You really need a lot of time spend with them and depending on the breed, you may have to pamper their fur coats if thick and needs brushing to shed for summer time. They also need daily exercise! A long walk should be great for them and you as well, as you get to know your new family member.",
+  " Small Pets can include hermit crabs, hamsters, guinea pigs, rabbits, rats, snails, you name it! These include animals that can live in a big enough cage for their size and stay (mostly) in one room. These are very much beginner and low maintenance pets. They do not require much attention or maintenance if you have a more busy life style. However they can not be shunned and still need their living environments to be cleaned and have enough attention from owners. Please do appropriate research on the specific small pet you would like to take into your new home."
+];
 
-for (let h=0; h<2; h++){
+for (let h=0; h<4; h++){
   arrIds[h].addEventListener("click", function(){
-    console.log(h)
+    let textnode = document.createTextNode(arrTitle[h]);
+    arrIds[h].appendChild(textnode);
     animalName.innerHTML = arrTitle[h]
     animalParagraph.innerHTML = arrDescription[h]
     animalInformation.scrollIntoView()
