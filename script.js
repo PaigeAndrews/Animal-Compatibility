@@ -16,8 +16,10 @@ let back = document.getElementById("back");
 let cat = document.getElementById("cat");
 let fish = document.getElementById("fish");
 let ferret = document.getElementById("ferret");
+let smallDog = document.getElementById("smallDog");
 let LargeDog = document.getElementById("largeDog");
 let goat = document.getElementById("goat");
+let smallBird = document.getElementById("smallBird");
 let largeBird = document.getElementById("largeBird");
 let horse = document.getElementById("horse");
 let medToHave = document.getElementsByClassName("medToHave");
@@ -40,21 +42,21 @@ let choices = document.getElementsByClassName("choices");
 
 
 // Animal values for refference
-const animalObject = {
-cat : 16,
-smallDog : 16,
-largeDog : 24,
-smallPet : -24,
-smallBird : -24,
-largeBird : 30,
-reptile : -24,
-amphibian : -24,
-fish : -40,
-Pig:16,
-ferret:0,
-goat:8,
-horse:36
-}
+// const animalObject = {
+// cat : 16,
+// smallDog : 16,
+// largeDog : 24,
+// smallPet : -24,
+// smallBird : -24,
+// largeBird : 30,
+// reptile : -24,
+// amphibian : -24,
+// fish : -40,
+// Pig:16,
+// ferret:0,
+// goat:8,
+// horse:36
+// }
 
 
 let nextClicked = 0;
@@ -124,7 +126,6 @@ function changeHTML(){
   for(i=0; i<5; i++){
     innerIds[i].removeChild(innerIds[i].childNodes[0]); 
     var textnode = document.createTextNode((changingArrays[i])[nextClicked]);
-    console.log(i)
     innerIds[i].appendChild(textnode);
   }
   num++
@@ -226,22 +227,27 @@ let animalParagraphArray = [
 //   })
 // }
 
-// let test_object = {
+// let animalObject = {
 //   cat: [
-//     "nyName",
+//     cat,
+//     "Cat",
 //     "myDescription"
-//     "new"
-//     "new"
 //   ],
-//   dog:[
-//     "name",
+//   smallDog:[
+//     "Small Dog",
 //     "description"
 //   ]
 // }
 
-// for (let name of "whatever the way to write object for loops is"){
-//   object_key.addEventListener("click", function(
-//     animalTitle.innerHTML = object_key[0]
-//     animalDescriptions.innerHTML = object_key[1] 
-//   ))
-// }
+arrIds = [cat, smallDog];
+arrTitle = ["Cat", "Small Dog"];
+arrDescription = ["cats are good", "small dogs are bad"];
+
+for (let h=0; h<2; h++){
+  arrIds[h].addEventListener("click", function(){
+    console.log(h)
+    animalName.innerHTML = arrTitle[h]
+    animalParagraph.innerHTML = arrDescription[h]
+    animalInformation.scrollIntoView()
+  })
+} 
