@@ -17,7 +17,7 @@ let cat = document.getElementById("cat");
 let fish = document.getElementById("fish");
 let ferret = document.getElementById("ferret");
 let smallDog = document.getElementById("smallDog");
-let LargeDog = document.getElementById("largeDog");
+let largeDog = document.getElementById("largeDog");
 let goat = document.getElementById("goat");
 let smallBird = document.getElementById("smallBird");
 let largeBird = document.getElementById("largeBird");
@@ -58,11 +58,8 @@ let choices = document.getElementsByClassName("choices");
 // horse:36
 // }
 
-
-let nextClicked = 0;
-let petPoints = 0;
-
 let titleArray = [
+  " ",
   "If you have children, how will having a pet affect them?",
   "Will you want a pet that is less destructive to the home or outside area?",
   "How much space do you have inside and outside your home?",
@@ -73,6 +70,7 @@ let titleArray = [
 ];
 
 let subTitle = [ 
+  " ",
 "Is that animal safe around small children?",
 "If you rent, do you have permission from the property owner?",
 "Will you need a fenced yard?",
@@ -83,6 +81,7 @@ let subTitle = [
 ];
 
 let choice1Array= [
+  " ",
 "I have small children's saftely to consider",
 "I don't want a pet that can leave marks on the home whatsoever",
 "I only have enough room for a pet to stay stationary(mostly) in one room",
@@ -93,6 +92,7 @@ let choice1Array= [
 ];
 
 let choice2Array = [
+  " ",
 "I have small children but I've taught them how to behave around animals",
 "I don't mind having the occational wear-and-tear caused by pets",
 "I have room for a pet to roam free in the home or some room outdoors",
@@ -103,6 +103,7 @@ let choice2Array = [
 ]
 
 let choice3Array = [
+  " ",
 "I dont have small children and we want a new family member",
 "Doesn't matter to me at all about damage caused by pets",
 "I have a large outside area for them",
@@ -112,13 +113,16 @@ let choice3Array = [
 "I have someone else in the home willing to take care of the pet anytime"
 ];
 
-let addDarkColor = ["darkAqua","darkPurple","darkGreen", "darkYellow", "darkOrange", "darkRed", "darkPink"];
-let addLightColor = ["lightAqua","lightPurple","lightGreen",  "lightYellow", "lightOrange", "lightRed", "lightPink"];
-let addButtonColor = ["aqua-buttons","purple-buttons", "green-buttons", "yellow-buttons", "orange-buttons", "red-buttons", "pink-buttons"];
+let addDarkColor = ["darkBlue", "darkAqua","darkPurple","darkGreen", "darkYellow", "darkOrange", "darkRed", "darkPink"];
+let addLightColor = ["lightBlue", "lightAqua","lightPurple","lightGreen",  "lightYellow", "lightOrange", "lightRed", "lightPink"];
+let addButtonColor = ["blue-buttons","purple-buttons", "green-buttons", "yellow-buttons", "orange-buttons", "red-buttons", "pink-buttons"];
 
 let innerIds = [mainQ, subQ, choice1, choice2, choice3];
 let changingArrays = [titleArray, subTitle, choice1Array, choice2Array, choice3Array];
+
 let num = 0;  
+let nextClicked = 1;
+let petPoints = 0;
 
 
  
@@ -129,14 +133,31 @@ function changeHTML(){
     innerIds[i].appendChild(textnode);
   }
   num++
-
+  let prev = nextClicked - 1
+  if (prev < 0) {
+    prev = addDarkColor.length - 1
+  }
+  console.log(nextClicked + " nextclicked")
+  console.log(prev + "previous")
   questionContainer.classList.add(addDarkColor[nextClicked])
-  questionSection.classList.add(addLightColor[nextClicked])  
+  questionContainer.classList.remove(addDarkColor[prev])
+
+  questionSection.classList.add(addLightColor[nextClicked])
+  questionSection.classList.remove(addDarkColor[prev])
+  
   choices[0].classList.add(addButtonColor[nextClicked])
+  choices[0].classList.remove(addDarkColor[prev])
+
   choices[1].classList.add(addButtonColor[nextClicked])
+  choices[1].classList.remove(addDarkColor[prev])
+
   choices[2].classList.add(addButtonColor[nextClicked])
+  choices[2].classList.remove(addDarkColor[prev])
+
   nextClicked++
-  if(nextClicked == 8){
+  
+  // if (nextClicked >= addDarkColor.length){ nextClicked = 0}
+  if(nextClicked == 7){
         resultsFunction()
         resultsHeader.scrollIntoView()
     }
@@ -207,48 +228,26 @@ choice3.addEventListener("click", function(){
 //  console.log(petPoints)
 })
 
-// let animalIds = ["cat"];
-// let animalIdParagraph = ["1"];
 
-//  cat.addEventListener("click", function(){
-//   document.getElementById("1").scrollIntoView()
-//  })
-
-let animalNameArray = [cat, smallDog];
-
-let animalParagraphArray = [
-  "Cats are a very common household pet. They cannot stay cooped up in one room, and ideally need roam of the house or outside. Cat need a litter box (changed daily). If you want mulitiple cats you need one per cat with one extra. Cats enjoy scratching posts and high places. Please note that cats can have mild destruction on home when it comes to their claws and fur. They are very loving but also independent animals, so you won't have to worry about them at work if you have a busy schedule.",
-  "Small dogs can stay indoors or outdoors. They need regular exercise and do not cause much home destruction. They need attention and playtime though, so before adopting one you have sufficent time to spend with it daily. Small dogs really enjoy little play toys you can leave around your home for them to play with. They are not a high maintenance pet. "
-];
-
-// for (let name of animalNameArray){
-//   name.addEventListener("click", function(){
-//     animalParagraph.innerHTML = animalParagraphArray[animalNameArray.indexOf(name)]
-//   })
-// }
-
-// let animalObject = {
-//   cat: [
-//     cat,
-//     "Cat",
-//     "myDescription"
-//   ],
-//   smallDog:[
-//     "Small Dog",
-//     "description"
-//   ]
-// }
-
-arrIds = [cat, smallDog, largeDog, smallPet];
-arrTitle = ["Cat", "Small Dog", "largeDog", "Small Pet"];
+arrIds = [cat, smallDog, largeDog, smallPet, smallBird, largeBird, reptile, amphibian, fish, pig, ferret, goat, horse];
+arrTitle = ["Cat", "Small Dog", "Large Dog", "Small Pet", "Small Bird", "Large Bird", "Reptile", "Amphibian", "Fish", "Pig", "Ferret", "Goat", "Horse"];
 arrDescription = [
-  "Cats are a very common household pet. They cannot stay cooped up in one room, and ideally need roam of the house or outside. Cat need a litter box (changed daily). If you want mulitiple cats you need one per cat with one extra. Cats enjoy scratching posts and high places. Please note that cats can have mild destruction on home when it comes to their claws and fur. They are very loving but also independent animals, so you won't have to worry about them at work if you have a busy schedule.", 
-  "Small dogs can stay indoors or outdoors. They need regular exercise and do not cause much home destruction. They need attention and playtime though, so before adopting one you have sufficent time to spend with it daily. Small dogs really enjoy little play toys you can leave around your home for them to play with. They are not a high maintenance pet.",
-  "Large dogs are about the same with medium dogs when it comes to care. They can also live indoors or outdoors, however, it is best for them be in a large outside area. You really need a lot of time spend with them and depending on the breed, you may have to pamper their fur coats if thick and needs brushing to shed for summer time. They also need daily exercise! A long walk should be great for them and you as well, as you get to know your new family member.",
-  " Small Pets can include hermit crabs, hamsters, guinea pigs, rabbits, rats, snails, you name it! These include animals that can live in a big enough cage for their size and stay (mostly) in one room. These are very much beginner and low maintenance pets. They do not require much attention or maintenance if you have a more busy life style. However they can not be shunned and still need their living environments to be cleaned and have enough attention from owners. Please do appropriate research on the specific small pet you would like to take into your new home."
+  "Cats are a very common household pet. They cannot stay cooped up in one room, and ideally need roam of the house or outside. Cats need a litter box (changed daily). If you want mulitiple cats you need one per cat with one extra. Cats enjoy scratching posts and high places. Please note that cats can have mild destruction on home when it comes to their claws and fur. They are very loving but also independent animals, so you won't have to worry about them at work if you have a busy schedule.", 
+  "Small dogs can stay indoors or outdoors. They need regular exercise and do not cause much home destruction. They need attention and playtime though, so before adopting one you should have sufficent time to spend with it daily. Small dogs really enjoy little play toys you can leave around your home for them to play with. They are not a high maintenance pets.",
+  "Large dogs are about the same as medium dogs when it comes to care. They can also live indoors or outdoors, however, it is best for them be in a large outside area. You really need a lot of time spend with them and depending on the breed, you may have to pamper their fur coats if thick and needs brushing to shed for summer time. They also need daily exercise! A long walk should be great for them and you as well, as you get to know your new family member.",
+  "Small Pets can include hermit crabs, hamsters, guinea pigs, rabbits, rats, snails, you name it! These include animals that can live in a big enough cage for their size and stay (mostly) in one room. These are very much beginner and low maintenance pets. They do not require much attention or maintenance if you have a more busy life style. However they can not be shunned and still need their living environments to be cleaned and have enough attention from owners. Please do appropriate research on the specific small pet you would like to take into your new home.",
+  "Small birds are mostly low maintenance pets, however they do need to have attention daily and cage cleaned. Ideally you should let them out of their enclosure daily as well to spend more time with you. You should have many gadgets and toys for your new small bird to play with in their cage and in your home. They are very social animals, so it would be a good idea to think about purchasing a second small bird to keep the other company.",
+  "Large birds are considered high maintenance pets. They are extremely social animals, so they require a great deal of attention and play time. These pets are not ideal for people who have a busy day to day life, and require many hours of attention from owners. Ideally the only time they should be left in their cage is when it is time for them to sleep. Some large birds can also be destructive on the home. many like to chew and snap anything they get ahold of in the home, or just make a mess in general. These are not beginner pets by any means. They are high cost high reward though! Having a large bird can be very comforting and are amazing pets! Some you can even teach to speak word to you or sing, and dance!",
+  "Reptiles are considered low to medium maintenance pets. They do not require a great deal of attention, and most of them can stay in their enclosures. They might require more money upfront, but the maintenance fees annually are very low. They need a UVB light and heating lamp in their enclosure to simulate daylight for their bones to grow propperly and to stay warm. They also need thier tanks cleaned at least weekly.",
+  "Amphibians are considered a mostly low maintenance pet. They shouldn't be handled too often. If you do handle them, make sure your hands are clean and also wet so that you don’t make them sick or hurt their skin. They will also need their enclosure cleaned regularly. They will most likely need a moist encolsure, so be sure to do extensive research on the pet you wish to get before committing.",
+  "Fish are one of the most low maintenance pets you can get, and are often reffered to as a 'beginners pet'. They do not require attention from you, but you still have to do weekly water changes to you tank and treat it with the right chemicals, so your fish doesn't die. There are many different types of fish, and you will have to do research on the specific kind you want. Some require a water heater and must maintain the water tempurature for their body.",
+  "Pigs are a lot cleaner than their popular reputation indicates and they can make super pets. They are sociable and intelligent, and can become very obedient, but they are also curious, stubborn, and — if treated poorly — potentially dangerous. Indoor pigs can be house trained and leash trained like dogs, but they have unique care requirements that you should be prepared for. If outside, make sure your pig has a big open fenced in area to roam. Pigs need to exercise and have attenton daily.",
+  "Ferrets are popular pets due to their friendly and outgoing personalities. Curious by nature, a ferret can provide hours of entertainment for their owner. However, they require a great deal of care and attention. To keep a ferret as a pet, you’ll need to create a proper cage environment with a litter box, food and water bowls, and toys. They are generally low maintenance pets, but still need attention and propper care. Please note they are escape artists, so make sure your home has no way outside before letting them run around in the home.",
+  "Goats are smart, curious pets that are fun to have around. However, they can also be hard work. If not cared for properly, they can get aggressive and may try to escape to greener pastures -- literally. Luckily, you can make your goat a happy family member by creating a safe home for them, feeding them properly, grooming them, and keeping them healthy.",
+  "A horse is a big time commitment. They can cost anywhere from $300 to $800 a month and they can live for 30 years or more. They are very much high maintenance pets and requre a lot money, outdoors space, and time! Horses hoofs need regular trimming. Soft surfaces such as pasture and stable bedding do not wear the hoof down at all therefore the hooves need to be trimmed about every three to four weeks (six weeks maximum). Still, horses are great companions and highly enjoyable, so make sure you're housing and feeding them properly and giving them the right care."
 ];
 
-for (let h=0; h<4; h++){
+for (let h=0; h<13; h++){
   arrIds[h].addEventListener("click", function(){
     let textnode = document.createTextNode(arrTitle[h]);
     arrIds[h].appendChild(textnode);

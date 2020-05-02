@@ -111,18 +111,6 @@ p{
     visibility: hidden;
 }
 
-/* #resultsContainer{
-    background: rgb(153, 97, 97);
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    visibility: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2%;
-} */
-
 #resultsHeader{
     justify-content: center;
     text-align: center;
@@ -131,6 +119,10 @@ p{
     background: white;
     width: 100%;
     height: auto;
+}
+
+.compatiblePara{
+    padding-top: 5%;
 }
 
 #resultsContainer{
