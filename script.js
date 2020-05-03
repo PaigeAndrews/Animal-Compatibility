@@ -157,7 +157,7 @@ function changeHTML(){
   nextClicked++
   
   // if (nextClicked >= addDarkColor.length){ nextClicked = 0}
-  if(nextClicked == 7){
+  if(nextClicked == 6){
         resultsFunction()
         resultsHeader.scrollIntoView()
     }
