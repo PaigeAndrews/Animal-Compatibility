@@ -133,6 +133,15 @@ p{
     margin:-10px;
 } 
 
+#tryAgainContainer{
+    display: none;
+}
+
+#tryAgain{
+    background: rgb(173, 170, 170);
+    border-radius: 3px;
+}
+
 #animalInformation{
     justify-content: center;
     text-align: center;
