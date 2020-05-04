@@ -157,7 +157,7 @@ function changeHTML(){
   nextClicked++
   
   // if (nextClicked >= addDarkColor.length){ nextClicked = 0}
-  if(nextClicked == 6){
+  if(nextClicked == 8){
         resultsFunction()
         resultsHeader.scrollIntoView()
     }
@@ -241,18 +241,32 @@ arrDescription = [
   "Reptiles are considered low to medium maintenance pets. They do not require a great deal of attention, and most of them can stay in their enclosures. They might require more money upfront, but the maintenance fees annually are very low. They need a UVB light and heating lamp in their enclosure to simulate daylight for their bones to grow propperly and to stay warm. They also need thier tanks cleaned at least weekly.",
   "Amphibians are considered a mostly low maintenance pet. They shouldn't be handled too often. If you do handle them, make sure your hands are clean and also wet so that you don’t make them sick or hurt their skin. They will also need their enclosure cleaned regularly. They will most likely need a moist encolsure, so be sure to do extensive research on the pet you wish to get before committing.",
   "Fish are one of the most low maintenance pets you can get, and are often reffered to as a 'beginners pet'. They do not require attention from you, but you still have to do weekly water changes to you tank and treat it with the right chemicals, so your fish doesn't die. There are many different types of fish, and you will have to do research on the specific kind you want. Some require a water heater and must maintain the water tempurature for their body.",
-  "Pigs are a lot cleaner than their popular reputation indicates and they can make super pets. They are sociable and intelligent, and can become very obedient, but they are also curious, stubborn, and — if treated poorly — potentially dangerous. Indoor pigs can be house trained and leash trained like dogs, but they have unique care requirements that you should be prepared for. If outside, make sure your pig has a big open fenced in area to roam. Pigs need to exercise and have attenton daily.",
+  "Pigs are a lot cleaner than their popular reputation indicates and they can make super pets. They are sociable and intelligent, and can become very obedient, but they are also curious, stubborn, and, if treated poorly, potentially dangerous. Indoor pigs can be house trained and leash trained like dogs, but they have unique care requirements that you should be prepared for. If outside, make sure your pig has a big open fenced in area to roam. Pigs need to exercise and have attenton daily.",
   "Ferrets are popular pets due to their friendly and outgoing personalities. Curious by nature, a ferret can provide hours of entertainment for their owner. However, they require a great deal of care and attention. To keep a ferret as a pet, you’ll need to create a proper cage environment with a litter box, food and water bowls, and toys. They are generally low maintenance pets, but still need attention and propper care. Please note they are escape artists, so make sure your home has no way outside before letting them run around in the home.",
-  "Goats are smart, curious pets that are fun to have around. However, they can also be hard work. If not cared for properly, they can get aggressive and may try to escape to greener pastures -- literally. Luckily, you can make your goat a happy family member by creating a safe home for them, feeding them properly, grooming them, and keeping them healthy.",
+  "Goats are smart, curious pets that are fun to have around. However, they can also require some work. If not cared for properly, they can get aggressive and may try to escape to greener pastures, literally. Luckily, you can make your goat a happy family member by creating a safe home for them, feeding them properly, grooming them, and keeping them healthy.",
   "A horse is a big time commitment. They can cost anywhere from $300 to $800 a month and they can live for 30 years or more. They are very much high maintenance pets and requre a lot money, outdoors space, and time! Horses hoofs need regular trimming. Soft surfaces such as pasture and stable bedding do not wear the hoof down at all therefore the hooves need to be trimmed about every three to four weeks (six weeks maximum). Still, horses are great companions and highly enjoyable, so make sure you're housing and feeding them properly and giving them the right care."
 ];
 
+let number = 0;
+
 for (let h=0; h<13; h++){
   arrIds[h].addEventListener("click", function(){
+
+    if (number > 0){
+      animalName.removeChild(animalName.childNodes[0]);
+      animalParagraph.removeChild(animalParagraph.childNodes[0]);
+    }
+
+    let tex = document.createTextNode(arrIds[h])
     let textnode = document.createTextNode(arrTitle[h]);
-    arrIds[h].appendChild(textnode);
-    animalName.innerHTML = arrTitle[h]
-    animalParagraph.innerHTML = arrDescription[h]
+    let t = document.createTextNode(arrDescription[h]);
+
+    arrIds[h].appendChild(tex);
+    animalName.appendChild(textnode);
+    animalParagraph.appendChild(t);
+
     animalInformation.scrollIntoView()
+    number++
+    
   })
 } 
