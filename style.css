@@ -211,7 +211,7 @@ img{
     .choices{
         height: 12vh;
         padding-left: 1.5%;
-        padding-right: 40%;
+        padding-right: 45%;
         padding-top: 3vh;
         padding-bottom: 3vh;
     }
@@ -230,7 +230,7 @@ img{
     }
 }
 
-@media (min-width: 1800px){
+@media (min-width: 1800px) and (min-height: 800px){
     .choices-container{
         font-size: 2.75rem;
     }
@@ -243,8 +243,15 @@ img{
     p{
         font-size: 2rem;
     }
+    .choices{
+        height: 12vh;
+    }
+    .choices-image{
+        display: block;
+        width: 40%;
+        height: 62vh;
+    }
 }
-
 
 
 

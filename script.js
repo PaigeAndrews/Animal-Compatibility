@@ -13,6 +13,7 @@ let animalName = document.getElementById("animalName");
 let animalParagraph = document.getElementById("animalParagraph");
 let nextButton = document.getElementById("nextButton");
 let tryAgainContainer = document.getElementById("tryAgainContainer");
+let sideImage = document.getElementById("sideImage");
 let back = document.getElementById("back");
 let cat = document.getElementById("cat");
 let fish = document.getElementById("fish");
@@ -118,6 +119,7 @@ let choice3Array = [
 let addDarkColor = ["darkBlue", "darkAqua","darkPurple","darkGreen", "darkYellow", "darkOrange", "darkRed", "darkPink"];
 let addLightColor = ["lightBlue", "lightAqua","lightPurple","lightGreen",  "lightYellow", "lightOrange", "lightRed", "lightPink"];
 let addButtonColor = ["blue-buttons","aqua-buttons","purple-buttons", "green-buttons", "yellow-buttons", "orange-buttons", "red-buttons", "pink-buttons"];
+let addSideImage = [" ", "images/holdingPet.png", "images/catScratch.png","images/yard.png","images/spendTime.png","images/walkingDog.png","images/vetBill.png","images/secondaryCargiver2.png" ];
 
 let innerIds = [mainQ, subQ, choice1, choice2, choice3];
 let changingArrays = [titleArray, subTitle, choice1Array, choice2Array, choice3Array];
@@ -140,6 +142,8 @@ function changeHTML(){
   }
   // console.log(nextClicked + " nextclicked")
   // console.log(prev + "previous")
+  sideImage.src = addSideImage[nextClicked]
+
   questionContainer.classList.add(addDarkColor[nextClicked])
   questionContainer.classList.remove(addDarkColor[prev])
 
