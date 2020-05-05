@@ -14,6 +14,7 @@ let animalParagraph = document.getElementById("animalParagraph");
 let nextButton = document.getElementById("nextButton");
 let tryAgainContainer = document.getElementById("tryAgainContainer");
 let sideImage = document.getElementById("sideImage");
+let animalParagraphRightImage = document.getElementById("animalParagraphRightImage");
 let back = document.getElementById("back");
 let cat = document.getElementById("cat");
 let fish = document.getElementById("fish");
@@ -176,6 +177,7 @@ function resultsFunction(){
         animalInformation.style.display= "block";
         resultsHeader.style.display = "block";
         tryAgainContainer.style.display = "flex";
+        // flex
 
         if(petPoints >= -32){
           fish.style.borderColor = "#57e657";
@@ -257,6 +259,22 @@ arrDescription = [
   "A horse is a big time commitment. They can cost anywhere from $300 to $800 a month and they can live for 30 years or more. They are very much high maintenance pets and requre a lot money, outdoors space, and time! Horses hoofs need regular trimming. Soft surfaces such as pasture and stable bedding do not wear the hoof down at all therefore the hooves need to be trimmed about every three to four weeks (six weeks maximum). Still, horses are great companions and highly enjoyable, so make sure you're housing and feeding them properly and giving them the right care."
 ];
 
+let descriptionImages = [
+  "images/DesCat.png",
+  "images/DesSmallDog.png",
+  "images/DesLargeDog.png",
+  "images/DesRabbit.png",
+  "images/DesSmallBird.png",
+  "images/DesLargeBird.png",
+  "images/DesReptile.png",
+  "images/DesFrog.png",
+  "images/DesFish.png",
+  "images/DesPig.png",
+  "images/DesFerret.png",
+  "images/DesGoat.png",
+  "images/DesHorse.png"
+]
+
 let number = 0;
 
 for (let h=0; h<13; h++){
@@ -265,17 +283,26 @@ for (let h=0; h<13; h++){
     if (number > 0){
       animalName.removeChild(animalName.childNodes[0]);
       animalParagraph.removeChild(animalParagraph.childNodes[0]);
+      animalParagraphRightImage.removeChild(animalParagraphRightImage.childNodes[0]);
+      tryAgainContainer.style.display = "block";
     }
+    animalParagraphRightImage.style.display = "inline-block";
+  
 
     let tex = document.createTextNode(arrIds[h])
     let textnode = document.createTextNode(arrTitle[h]);
     let t = document.createTextNode(arrDescription[h]);
+    let tImage = document.createTextNode(descriptionImages[h]);
+
+    animalParagraphRightImage.src = descriptionImages[h];
+
 
     arrIds[h].appendChild(tex);
     animalName.appendChild(textnode);
     animalParagraph.appendChild(t);
+    animalParagraphRightImage.appendChild(tImage);
 
-    animalInformation.scrollIntoView()
+    animalName.scrollIntoView()
     number++
 
   })

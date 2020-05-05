@@ -4,6 +4,10 @@ body, html{
     font-family: 'Baloo Bhaina 2', cursive;
     width: 100%;
     overflow-x: hidden;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .opening-Container{
@@ -21,8 +25,10 @@ body, html{
     /* background: -webkit-linear-gradient(rgb(54, 54, 54), rgb(163, 163, 163)); */
     
     background: -webkit-linear-gradient(#57e657, rgb(187, 187, 187));
+    color: rgb(102, 139, 243);
+    background: -webkit-linear-gradient(rgb(80, 114, 209), rgb(187, 187, 187));
     -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
 }
 
 h1{
@@ -30,7 +36,8 @@ h1{
     margin: 0;
 }
 h5{
-    color: rgb(85, 85, 85);
+    /* color: rgb(85, 85, 85); */
+    color: rgb(80, 114, 209);
     font-size: 3.3rem;
     letter-spacing: 2px;
 }
@@ -135,9 +142,17 @@ p{
 }
 
 #tryAgain{
-    background: rgb(173, 170, 170);
+    background: rgb(80, 114, 209);
     border-radius: 3px;
+    float: bottom;
 }
+
+/* .button-wrap{
+    float: bottom;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+} */
 
 #animalInformation{
     justify-content: center;
@@ -185,6 +200,9 @@ img{
     display: none;
 }
 
+#animalParagraphRightImage{
+    display: none;
+}
 
 
 @media (min-width: 1300px){
@@ -216,7 +234,7 @@ img{
         padding-bottom: 3vh;
     }
     .choices-container{
-        font-size: 2rem;
+        font-size: 1.7rem;
         text-align: left;
     }
     .choices-image{
@@ -228,6 +246,77 @@ img{
         border: none;
         border-radius: 50% 0 0 50%;
     }
+    
+    .animalImage{
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin: 2%;
+    }
+
+    .animal-container{
+        width: 150px;
+        height: auto;
+        text-align: center;
+        margin: 2%;
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+    .compatiblePara{
+        font-size: 1.3rem;
+    }
+    
+    hr{
+        background: rgb(211, 211, 211);
+        height: 2px;
+   }
+   h6{
+       font-size: 1rem;
+   }
+   h5{
+       margin-top: 5%;
+       margin-bottom: 5%;
+   }
+   #openingParagraph{
+       font-size: 1rem;
+   }
+   #tryAgainContainer{
+       justify-content: center;
+       align-items: center;
+   }
+   #tryAgain{
+    width: 40vw;
+    font-size: 2rem;
+   }
+   img{
+    border: 5px solid rgb(253, 81, 81);
+    }
+    #animalInformation{
+        justify-content: center;
+        text-align: center;
+        display: none;
+        padding: 2%;
+        background: white;
+        width: 100%;
+        height: auto;
+    }
+    #animalParagraph{
+        float: left;
+        width: 45%;
+        padding: 2.5%;
+        margin: 0;
+    }
+    #animalParagraphRightImage{
+        float: right;
+        width: 45%;
+        height: auto;
+        border: none;
+        max-height: 400px;
+        max-width: 900px;
+        overflow: hidden;
+        padding: 2.5% 2.5% 2.5% 0;
+    }
+    
 }
 
 @media (min-width: 1800px) and (min-height: 800px){
@@ -249,7 +338,10 @@ img{
     .choices-image{
         display: block;
         width: 40%;
-        height: 62vh;
+        /* height: 62vh; */
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
     }
 }
 
