@@ -100,7 +100,7 @@ p{
     justify-content: center;
     padding: 4% 0 4% 0;
     background: white;
-    width: 100%;
+    width: 100vw;
 }
 
 .next-button{
