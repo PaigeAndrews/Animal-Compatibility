@@ -88,14 +88,29 @@ p{
     text-align: center;
 }
 
+
+#tryAgainContainer{
+    display: none;
+}
+
+#tryAgain{
+   
+}
+
+
 .next-button-container{
-    display: flex;
+    /* display: flex; */
+    display: block;
+    align-items: center;
     justify-content: center;
     padding: 4%;
     background: white;
+    width: 100%;
 }
 
 .next-button{
+    background: rgb(80, 114, 209);
+    border-radius: 3px;
     width: 70vw;
     padding: 2%;
     color: white;
@@ -136,16 +151,6 @@ p{
     padding: 2%;
     margin:-10px;
 } 
-
-#tryAgainContainer{
-    display: none;
-}
-
-#tryAgain{
-    background: rgb(80, 114, 209);
-    border-radius: 3px;
-    float: bottom;
-}
 
 /* .button-wrap{
     float: bottom;
@@ -202,8 +207,14 @@ img{
 
 #animalParagraphRightImage{
     display: none;
+    border: none;
 }
 
+.block{
+    width: 100%;
+    height: 5px;
+    display: block;
+}
 
 @media (min-width: 1300px){
     h1{
@@ -283,13 +294,14 @@ img{
    #tryAgainContainer{
        justify-content: center;
        align-items: center;
+       
    }
-   #tryAgain{
-    width: 40vw;
-    font-size: 2rem;
+   .next-button{
+        width: 40vw;
+        font-size: 2rem;
    }
    img{
-    border: 5px solid rgb(253, 81, 81);
+        border: 5px solid rgb(253, 81, 81);
     }
     #animalInformation{
         justify-content: center;
@@ -301,10 +313,12 @@ img{
         height: auto;
     }
     #animalParagraph{
+        display: none;
         float: left;
         width: 45%;
         padding: 2.5%;
         margin: 0;
+        /* margin-bottom: 10%; */
     }
     #animalParagraphRightImage{
         float: right;
@@ -319,7 +333,7 @@ img{
     
 }
 
-@media (min-width: 1800px) and (min-height: 800px){
+@media (min-width: 1800px) and (min-height: 1000px){
     .choices-container{
         font-size: 2.75rem;
     }

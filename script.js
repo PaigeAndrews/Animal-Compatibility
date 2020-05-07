@@ -284,8 +284,9 @@ for (let h=0; h<13; h++){
       animalName.removeChild(animalName.childNodes[0]);
       animalParagraph.removeChild(animalParagraph.childNodes[0]);
       animalParagraphRightImage.removeChild(animalParagraphRightImage.childNodes[0]);
-      tryAgainContainer.style.display = "block";
+      // tryAgainContainer.style.display = "block";
     }
+    animalParagraph.style.display = "inline-block";
     animalParagraphRightImage.style.display = "inline-block";
   
 
@@ -307,3 +308,23 @@ for (let h=0; h<13; h++){
 
   })
 } 
+
+// for (let h=0; h<13; h++){
+//   arrIds[h].addEventListener("click", function(){
+
+//     if (number > 0){
+//       // tryAgainContainer.style.display = "block";
+//     }
+//     animalParagraph.style.display = "inline-block";
+//     animalParagraphRightImage.style.display = "inline-block";
+  
+
+//     animalName.innerHTML = arrTitle[h];
+//     animalParagraph.innerHTML = arrDescription[h];
+//     animalParagraphRightImage.src = descriptionImages[h]
+
+//     animalName.scrollIntoView()
+//     number++
+
+//   })
+// } 
