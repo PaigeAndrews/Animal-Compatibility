@@ -208,6 +208,12 @@ img{
 #animalParagraphRightImage{
     display: none;
     border: none;
+    width: 45%;
+        height: auto;
+        border: none;
+        max-height: 400px;
+        max-width: 900px;
+        overflow: hidden;
 }
 
 .block{
@@ -359,6 +365,23 @@ img{
     }
 }
 
+
+@media (min-width: 2500px){
+    #animalParagraphRightImage{
+        padding: 2.5% 6% 2.5% 0;
+    }
+    .compatiblePara{
+        font-size: 1.7rem;
+    }
+    .animalImage{
+        width: 150px;
+        height: 150px;
+        margin: 2%;
+    }
+    h6{
+        font-size: 1.3rem;
+    }
+}
 
 
 /* Blue Area */

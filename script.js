@@ -177,7 +177,7 @@ function resultsFunction(){
         animalInformation.style.display= "block";
         resultsHeader.style.display = "block";
         tryAgainContainer.style.display = "flex";
-        // flex
+        
 
         if(petPoints >= -32){
           fish.style.borderColor = "#57e657";
