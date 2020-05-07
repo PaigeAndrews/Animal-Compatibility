@@ -3,6 +3,7 @@ body, html{
     padding: 0;
     font-family: 'Baloo Bhaina 2', cursive;
     width: 100%;
+    height: auto;
     overflow-x: hidden;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -12,8 +13,8 @@ body, html{
 
 .opening-Container{
     background: white;
-    align-items: center;
-    text-align: center;
+    /* align-items: center;
+    text-align: center; */
     width: 100%;
     height: auto;
     margin: 0;
@@ -21,13 +22,15 @@ body, html{
 }
 
 #openingParagraph{
-    /* font-size: 0.7rem; */
+    float: left;
     
 }
 
 .colorGradient{
     -webkit-text-stroke: 2px black;
     color: rgb(102, 139, 243);
+    align-items: center;
+    text-align: center;
 }
 
 h1{
@@ -100,7 +103,7 @@ p{
     justify-content: center;
     padding: 4% 0 4% 0;
     background: white;
-    width: 100vw;
+    width: 100%;
 }
 
 .next-button{
@@ -137,6 +140,7 @@ p{
 
 .compatiblePara{
     padding-top: 5%;
+    float: left;
 }
 
 #resultsContainer{
@@ -186,7 +190,6 @@ p{
 
 #animalInformation{
     justify-content: center;
-    text-align: center;
     display: none;
     padding: 2%;
     background: white;
@@ -194,6 +197,9 @@ p{
     height: auto;
 }
 
+#animalName{
+    text-align: center;
+}
 
 .animalImage{
     border-radius: 50%;
@@ -228,6 +234,20 @@ img{
     max-width: 900px;
     overflow: hidden;
     border-radius: 3px;
+    
+}
+
+.center{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#animalParagraph{
+    float: left;
 }
 
 .block{
@@ -283,6 +303,7 @@ img{
         width: 100px;
         height: 100px;
         margin: 2%;
+        
     }
 
     .animal-container{
@@ -324,8 +345,8 @@ img{
         border: 5px solid rgb(253, 81, 81);
     }
     #animalInformation{
-        justify-content: center;
-        text-align: center;
+        /* justify-content: center;
+        text-align: center; */
         display: none;
         padding: 2%;
         background: white;
@@ -349,6 +370,7 @@ img{
         max-width: 900px;
         overflow: hidden;
         padding: 2.5% 2.5% 2.5% 0;
+        
     }
     
 }
