@@ -345,8 +345,8 @@ img{
         border: 5px solid rgb(253, 81, 81);
     }
     #animalInformation{
-        /* justify-content: center;
-        text-align: center; */
+        justify-content: center;
+        text-align: center;
         display: none;
         padding: 2%;
         background: white;
@@ -362,15 +362,19 @@ img{
         /* margin-bottom: 10%; */
     }
     #animalParagraphRightImage{
-        float: right;
-        width: 45%;
+        display: inline-block;
+        /* float: right; */
+        width: 100%;
         height: auto;
         border: none;
-        max-height: 400px;
-        max-width: 900px;
+        /* max-height: 400px;
+        max-width: 900px; */
         overflow: hidden;
         padding: 2.5% 2.5% 2.5% 0;
         
+    }
+    .center{
+        width: 45%;
     }
     
 }
@@ -407,7 +411,7 @@ img{
         padding: 2.5% 6% 2.5% 0;
     }
     .compatiblePara{
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
     .animalImage{
         width: 150px;
