@@ -86,7 +86,7 @@ let subTitle = [
 
 let choice1Array= [
   " ",
-"I have small children's saftely to consider",
+"I have small children's safety to consider",
 "I don't want a pet that can leave marks on the home whatsoever",
 "I only have enough room for a pet to stay stationary(mostly) in one room",
 "I'm busy with little free time and I'm out of the house for most of the day",
