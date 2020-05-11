@@ -166,8 +166,6 @@ p{
     display: flex;
     flex-wrap: wrap;
     padding: 5% 2% 2% 2%;
-    /* margin:-10px; */
-
 } 
 
 .icon-container{
@@ -230,8 +228,8 @@ img{
     width: 45%;
     height: auto;
     border: none;
-    max-height: 400px;
-    max-width: 900px;
+    /* max-height: 400px;
+    max-width: 900px; */
     overflow: hidden;
     border-radius: 3px;
     
@@ -375,6 +373,13 @@ img{
     }
     .center{
         width: 45%;
+    }
+    #iconContainer{
+        padding: 5% 6% 2% 6%;
+    } 
+    .icon-container{
+        height: auto;
+        margin: 0 4% 0 4%;
     }
     
 }
