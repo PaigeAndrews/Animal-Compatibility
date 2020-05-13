@@ -31,36 +31,6 @@ let easyToHave = document.getElementsByClassName("easyToHave");
 let choices = document.getElementsByClassName("choices");
 
 
-// window.onload = function() {
-//   var node = document.createElement("LI");
-//   var textnode = document.createTextNode("Water");
-//   node.appendChild(textnode);
-//   document.getElementById("myList").appendChild(node);
-
-//   mainQ.innerHTML = titleArray[0]
-//   subQ.innerHTML= subTitle[0]
-//   choice1.innerHTML = choice1Array[0]
-//   choice2.innerHTML = choice2Array[0]
-//   choice3.innerHTML = choice3Array[0]
-// };
-
-
-// Animal values for refference
-// const animalObject = {
-// cat : 16,
-// smallDog : 16,
-// largeDog : 24,
-// smallPet : -24,
-// smallBird : -24,
-// largeBird : 30,
-// reptile : -24,
-// amphibian : -24,
-// fish : -32,
-// Pig:24,
-// ferret:0,
-// goat:16,
-// horse:36
-// }
 
 let titleArray = [
   " ",
@@ -141,8 +111,7 @@ function changeHTML(){
   if (prev < 0) {
     prev = addDarkColor.length - 1
   }
-  // console.log(nextClicked + " nextclicked")
-  // console.log(prev + "previous")
+  
   sideImage.src = addSideImage[nextClicked]
 
   questionContainer.classList.add(addDarkColor[nextClicked])
@@ -162,7 +131,6 @@ function changeHTML(){
 
   nextClicked++
   
-  // if (nextClicked >= addDarkColor.length){ nextClicked = 0}
   if(nextClicked == 9){
         resultsFunction()
         resultsHeader.scrollIntoView()
@@ -284,47 +252,26 @@ for (let h=0; h<13; h++){
       animalName.removeChild(animalName.childNodes[0]);
       animalParagraph.removeChild(animalParagraph.childNodes[0]);
       animalParagraphRightImage.removeChild(animalParagraphRightImage.childNodes[0]);
-      // tryAgainContainer.style.display = "block";
     }
+    
     animalParagraph.style.display = "inline-block";
     animalParagraphRightImage.style.display = "inline-block";
-  
 
-    let tex = document.createTextNode(arrIds[h])
-    let textnode = document.createTextNode(arrTitle[h]);
-    let t = document.createTextNode(arrDescription[h]);
-    let tImage = document.createTextNode(descriptionImages[h]);
+    let textnodeIds = document.createTextNode(arrIds[h])
+    let textnodeTitle = document.createTextNode(arrTitle[h]);
+    let textnodeDes = document.createTextNode(arrDescription[h]);
+    let textnodeImage = document.createTextNode(descriptionImages[h]);
 
     animalParagraphRightImage.src = descriptionImages[h];
 
 
-    arrIds[h].appendChild(tex);
-    animalName.appendChild(textnode);
-    animalParagraph.appendChild(t);
-    animalParagraphRightImage.appendChild(tImage);
+    arrIds[h].appendChild(textnodeIds);
+    animalName.appendChild(textnodeTitle);
+    animalParagraph.appendChild(textnodeDes);
+    animalParagraphRightImage.appendChild(textnodeImage);
 
     animalName.scrollIntoView()
     number++
 
   })
 } 
-
-// for (let h=0; h<13; h++){
-//   arrIds[h].addEventListener("click", function(){
-
-//     if (number > 0){
-//       // tryAgainContainer.style.display = "block";
-//     }
-//     animalParagraph.style.display = "inline-block";
-//     animalParagraphRightImage.style.display = "inline-block";
-  
-
-//     animalName.innerHTML = arrTitle[h];
-//     animalParagraph.innerHTML = arrDescription[h];
-//     animalParagraphRightImage.src = descriptionImages[h]
-
-//     animalName.scrollIntoView()
-//     number++
-
-//   })
-// } 
