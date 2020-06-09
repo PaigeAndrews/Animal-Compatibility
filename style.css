@@ -95,6 +95,10 @@ p{
     display: none;
 }
 
+#tryAgain:hover{
+    cursor: pointer;
+}
+
 .next-button-container{
     display: block;
     align-items: center;
@@ -206,6 +210,9 @@ p{
     margin: 2%;
 }
 
+.animalImage:hover{
+    cursor: pointer;
+}
 
 hr{
     width: 80%;
